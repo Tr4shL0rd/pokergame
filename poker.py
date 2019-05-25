@@ -19,7 +19,7 @@ bets()
 
 
 print()
-
+#stupid shit that has all the cards
 randomCard1 = random.choice(["Rock", "Paper", "Scissors","Rock", "Scissors", "Rock", "Paper", "Scissors","Rock", "Scissors" ])
 randomCard2 = random.choice(["Rock", "Paper", "Scissors","Rock", "Scissors", "Rock", "Paper", "Scissors","Rock", "Scissors" ])
 randomCard3 = random.choice(["Rock", "Paper", "Scissors","Rock", "Scissors", "Rock", "Paper", "Scissors","Rock", "Scissors" ])
@@ -28,7 +28,7 @@ CPUrandomCard2 = random.choice(["Rock", "Paper", "Scissors","Rock", "Scissors", 
 CPUrandomCard3 = random.choice(["Rock", "Paper", "Scissors","Rock", "Scissors", "Rock", "Paper", "Scissors","Rock", "Scissors" ])
 CPUrandomCard1 = random.choice(["Rock", "Paper", "Scissors","Rock", "Scissors", "Rock", "Paper", "Scissors","Rock", "Scissors" ])
 
-
+#some stupid shit that makes the game work somehow
 cpuCardArray = [CPUrandomCard1, CPUrandomCard2, CPUrandomCard3]
 cpuCard = random.choice(cpuCardArray)
 
@@ -45,6 +45,7 @@ time.sleep(1)
 print("2")
 time.sleep(1)
 print("3!")
+#some very stupid if statments that hit two cards very hard together and then somehow fingures out what the answer will be 
 if yourCard == cpuCard:
         print("DRAW!")
         print("you chose {}".format(yourCard))
