@@ -31,14 +31,19 @@ CPUrandomCard1 = random.choice(["Rock", "Paper", "Scissors","Rock", "Scissors", 
 
 cpuCardArray = [CPUrandomCard1, CPUrandomCard2, CPUrandomCard3]
 cpuCard = random.choice(cpuCardArray)
-print(CPUrandomCard1, CPUrandomCard2, CPUrandomCard3)
+print(cpuCard)
 print(colored("let the game begin", "green"))
 print()
+#cpuSingleCard =  
 yourHand = print ("you got {}, {}, {}".format(randomCard1,randomCard2,randomCard3))
+yourChoices = [randomCard1, randomCard2 ,randomCard3]
 yourCard = input("what do you want to draw? ")
-if yourCard != yourHand:
-        print("thats not a valid card!")
-        exit()
+print(yourChoices)
+print(yourCard)
+#if yourChoices != yourCard:
+#        print("thats not a valid card!")
+#        exit()
+#time.sleep(100)
 print("we will draw on 3")
 print()
 print("1")
@@ -48,15 +53,43 @@ time.sleep(1)
 print("3!")
 if yourCard == cpuCard:
         print("DRAW!")
-print("your opponent drew {}".format(CPUrandomCard1))
+        print("your opponent drew {}".format(CPUrandomCard1))
 
 if yourCard == cpuCard:
         print("both you and your opponent chose the same card")
         print("you chose {}".format(yourCard))
         print("your opponent chose {}".format(cpuCard))
+        print(colored("DRAW!", "yellow"))
+        exit()
 elif yourCard == "Rock" and cpuCard == "Paper":
         print("you chose {}".format(yourCard))
         print("your opponent chose {}".format(cpuCard))
-        print("you WIN!")
+        print(colored("you LOST!", "red"))
+        exit()
+elif yourCard == "Rock" and cpuCard == "Scissors":
+        print("you chose {}".format(yourCard))
+        print("your opponent chose {}".format(cpuCard))
+        print(colored("you WIN!", "green"))
+        exit()
+elif yourCard == "Paper" and cpuCard == "Rock":
+        print("you chose {}".format(yourCard))
+        print("you opponent chose {}".format(cpuCard))
+        print(colored("you WIN!", "green"))
+        exit()
+elif yourCard == "Paper" and cpuCard == "Scissors":
+        print("you chose {}".format(yourCard))
+        print("you opponent chose {}".format(cpuCard))
+        print(colored("you LOST!", "red"))
+        exit()
+elif yourCard == "Scissors" and cpuCard == "paper":
+        print("you chose {}".format(yourCard))
+        print("you opponent chose {}".format(cpuCard))
+        print(colored("you WIN!", "green"))
+elif yourCard == "Scissor" and cpuCard == "Rock":
+        print("you chose {}".format(yourCard))
+        print("your opponent chose {}".format(cpuCard))
+        print(colored("you LOST!", "red"))
+        exit()
 
+        
 
