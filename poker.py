@@ -31,19 +31,15 @@ CPUrandomCard1 = random.choice(["Rock", "Paper", "Scissors","Rock", "Scissors", 
 
 cpuCardArray = [CPUrandomCard1, CPUrandomCard2, CPUrandomCard3]
 cpuCard = random.choice(cpuCardArray)
-print(cpuCard)
+#print(cpuCard)
 print(colored("let the game begin", "green"))
 print()
-#cpuSingleCard =  
+  
 yourHand = print ("you got {}, {}, {}".format(randomCard1,randomCard2,randomCard3))
 yourChoices = [randomCard1, randomCard2 ,randomCard3]
 yourCard = input("what do you want to draw? ")
-print(yourChoices)
-print(yourCard)
-#if yourChoices != yourCard:
-#        print("thats not a valid card!")
-#        exit()
-#time.sleep(100)
+#print(yourChoices)
+#print(yourCard)
 print("we will draw on 3")
 print()
 print("1")
