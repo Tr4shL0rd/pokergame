@@ -36,7 +36,7 @@ print(colored("let the game begin", "green"))
 print()
   
 yourHand = print ("you got {}, {}, {}".format(randomCard1,randomCard2,randomCard3))
-yourChoices = [randomCard1, randomCard2 ,randomCard3]
+yourChoices = [randomCard1, randomCard2, randomCard3]
 yourCard = input("what do you want to draw? ")
 print("we will draw on 3")
 print()
