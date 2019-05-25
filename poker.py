@@ -53,7 +53,9 @@ time.sleep(1)
 print("3!")
 if yourCard == cpuCard:
         print("DRAW!")
-        print("your opponent drew {}".format(CPUrandomCard1))
+        print("you chose {}".format(yourCard))
+        print("your opponent chose {}".format(CPUrandomCard1))
+        exit()
 
 if yourCard == cpuCard:
         print("both you and your opponent chose the same card")
