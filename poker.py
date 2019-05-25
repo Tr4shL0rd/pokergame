@@ -10,7 +10,7 @@ print("so you can end up with 2 scissord and one rock")
 print()
 def bets():
     bet = input("How many do you want to bet? " )
-    confirmation = input("you bet %s chips, are you sure? " % bet)
+    confirmation = input("you bet {} chips, are you sure? ".format(bet))
     if confirmation == "no":
         bets()
 
@@ -45,7 +45,8 @@ time.sleep(1)
 print("2")
 time.sleep(1)
 print("3!")
-#some very stupid if statments that hit two cards very hard together and then somehow fingures out what the answer will be 
+print(colored("SHOW YOUR CARDS!", "red"))
+#some very stupid if statments that hit two cards very hard againts each other and then somehow figures out what the answer will be 
 if yourCard == cpuCard:
         print("DRAW!")
         print("you chose {}".format(yourCard))
