@@ -7,7 +7,7 @@ def rules():
         print(clear)
         #rules
         print("                                RULES                                                                                       ")
-        print("the rules are easy, its basicly a round of Rock Paper Scissors                                                              ")
+        print("the rules are easy, its basically a round of Rock Paper Scissors                                                              ")
         print("expect, every player will get three randomly drawn 'cards', and start with 120 chips to bet with(one chip is worth 1000 usd)")
         print("so you can end up with two scissord and one rock                                                                            ")
 rules()
@@ -23,7 +23,7 @@ def bets():
                 print("you dont have {} chips".format(bets.yourBet))
                 bets()
         elif bets.yourBet < 1:
-                print("you have to bet something")
+                print("its not fun unless you bet something.")
                 bets()
         print("you have {} chips left".format(bets.chips))
         confirmation = input("you bet {} chips, are you sure? ".format(bets.yourBet)).lower()
