@@ -7,7 +7,7 @@ def rules():
         print(clear)
         #rules
         print("                                RULES                                                                                       ")
-        print("the rules are easy, its basically a round of Rock Paper Scissors                                                              ")
+        print("the rules are easy, its basically a round of Rock Paper Scissors                                                            ")
         print("expect, every player will get three randomly drawn 'cards', and start with 120 chips to bet with(one chip is worth 1000 usd)")
         print("so you can end up with two scissord and one rock                                                                            ")
 rules()
