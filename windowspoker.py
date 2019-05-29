@@ -19,6 +19,7 @@ def bets():
         bets.yourDebt = 0
         bets.yourBet = input("How many do you want to bet? " )
         bets.yourBet = int(bets.yourBet)
+        bets.chips = bets.chips - bets.yourBet
         if bets.yourBet > 120: 
                 print("you dont have {} chips".format(bets.yourBet))
                 bets()

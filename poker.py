@@ -1,9 +1,8 @@
 import random
-from colorama import init
 from termcolor import colored 
 import time
 clear = "\n" * 100
-init()
+
 def rules():
         print(clear)
         #rules
@@ -15,15 +14,18 @@ rules()
 
 print()
 def bets():
+        bets.chips = 120
         bets.yourDebt = 0
         bets.yourBet = input("How many do you want to bet? " )
         bets.yourBet = int(bets.yourBet)
+        bets.chips = bets.chips - bets.yourBet
         if bets.yourBet > 120: 
                 print("you dont have {} chips".format(bets.yourBet))
                 bets()
         elif bets.yourBet < 1:
                 print("you have to bet something")
                 bets()
+        print("you have {} chips left".format(bets.chips))
         confirmation = input("you bet {} chips, are you sure? ".format(bets.yourBet)).lower()
         if confirmation == "no":
                 bets()
@@ -45,7 +47,7 @@ def game():
         #some stupid shit that makes the game work somehow
         cpuCardArray = [CPUrandomCard1, CPUrandomCard2, CPUrandomCard3]
         cpuCard = random.choice(cpuCardArray)
-        print("your money: {}".format(bets.yourBet)) 
+        print("your money: {} thousand usd".format(bets.yourBet)) 
         print(colored("let the game begin", "green"))
         print()
         
@@ -80,6 +82,8 @@ def game():
                 print("your opponent chose {}".format(cpuCard))
                 print(colored("you LOST!", "red"))
                 print(colored("you lost {} chips, and you opponent gains {} chips".format(bets.yourBet, CPUbet)), "red")
+                bets.chips = bets.chips - bets.yourBet
+                print("you have {} chips left".format(bets.chips))
                 bets.yourDebt = bets.yourDebt + bets.yourBet * 1000
                 bets.yourBet =  120 - bets.yourBet
                 print("your owe {} usd".format(bets.yourDebt))
@@ -94,6 +98,8 @@ def game():
                 print("your opponent chose {}".format(cpuCard))
                 print(colored("you WIN!", "green"))
                 print(colored("you gained {} chips, and you opponent lost {} chips".format(bets.yourBet, CPUbet)), "green")
+                bets.chips = bets.chips + bets.yourBet
+                print("you have {} chips left".format(bets.chips))
                 bets.yourBet =  bets.yourBet + CPUbet * 1000
                 print("you won {} usd".format(bets.yourBet))
                 retry = input("play again? ")
@@ -108,6 +114,8 @@ def game():
                 print("you opponent chose {}".format(cpuCard))
                 print(colored("you LOST!", "red"))
                 print(colored("you lost {} chips, and you opponent gains {} chips".format(bets.yourBet, CPUbet)), "red")
+                bets.chips = bets.chips - bets.yourBet
+                print("you have {} chips left".format(bets.chips))
                 bets.yourDebt = bets.yourDebt + bets.yourBet * 1000
                 bets.yourBet =  120 - bets.yourBet
                 print("your owe {} usd".format(bets.yourDebt))
@@ -122,6 +130,8 @@ def game():
                 print("you opponent chose {}".format(cpuCard))
                 print(colored("you WIN!", "green"))
                 print(colored("you gained {} chips, and you opponent lost {} chips".format(bets.yourBet, CPUbet)), "green")
+                bets.chips = bets.chips + bets.yourBet
+                print("you have {} chips left".format(bets.chips))
                 bets.yourBet =  bets.yourBet + CPUbet * 1000
                 print("you won {}  usd ".format(bets.yourBet))
                 retry = input("play again? ")
@@ -136,6 +146,8 @@ def game():
                 print("your opponent chose {}".format(cpuCard))
                 print(colored("you LOST!", "red"))
                 print(colored("you lost {} chips, and you opponent gains {} chips".format(bets.yourBet, CPUbet)), "red")
+                bets.chips = bets.chips - bets.yourBet
+                print("you have {} chips left".format(bets.chips))
                 bets.yourDebt = bets.yourDebt + bets.yourBet * 1000
                 bets.yourBet =  120 - bets.yourBet
                 print("your owe {} usd".format(bets.yourDebt))
@@ -150,6 +162,8 @@ def game():
                 print("you opponent chose {}".format(cpuCard))
                 print(colored("you WIN!", "green"))
                 print(colored("you gained {} chips, and you opponent lost {} chips".format(bets.yourBet, CPUbet)), "green")
+                bets.chips = bets.chips + bets.yourBet
+                print("you have {} chips left".format(bets.chips))
                 bets.yourBet =  120 - bets.yourBet * 1000
                 print("you won {}".format(bets.yourBet))
                 retry = input("play again? ")
