@@ -35,13 +35,13 @@ print()
 def game():
         print()
         #stupid shit that has all the cards and bets
-        randomCard1 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors" ])
-        randomCard2 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors" ])
-        randomCard3 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors" ])
+        randomCard1 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors", "paper", "paper"])
+        randomCard2 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors", "paper", "paper"])
+        randomCard3 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors", "paper", "paper"])
 
-        CPUrandomCard2 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors" ])
-        CPUrandomCard3 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors" ])
-        CPUrandomCard1 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors" ])
+        CPUrandomCard2 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors", "paper", "paper"])
+        CPUrandomCard3 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors", "paper", "paper"])
+        CPUrandomCard1 = random.choice(["rock", "paper", "scissors","rock", "scissors", "rock", "paper", "scissors","rock", "scissors", "paper", "paper"])
         CPUbet = random.randrange(1, 120)
 
         #some stupid shit that makes the game work somehow
@@ -52,7 +52,7 @@ def game():
         print()
         
         yourHand = print ("you got {}, {}, {}".format(randomCard1,randomCard2,randomCard3))
-        yourChoices = [randomCard1, randomCard2, randomCard3]
+        yourChoices = randomCard1, randomCard2, randomCard3
         yourCard = input("what do you want to draw? ").lower()
         print("we will draw on 3")
         print()
